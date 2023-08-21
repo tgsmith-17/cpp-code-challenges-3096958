@@ -9,14 +9,23 @@
 
 // FizzBuzz, main()
 // Summary: This application runs on the main function.
-int main(){
-    int n; // How many numbers to include in the sequence.
-    
-    std::cout << "Enter a positive integer: " << std::flush;
-    std::cin >> n;
+int main() {
+  int n; // How many numbers to include in the sequence.
 
-    // Write your code here
-    
-    std::cout << std::endl << std::flush;
-    return 0;
+  std::cout << "Enter a positive integer: " << std::flush;
+  std::cin >> n;
+  
+  for(int i = 1; i <= n; i++) {
+    if(i % 3 == 0 && i % 5 == 0) {
+      std::cout << "FizzBuzz\n";
+    } else if(i % 3 == 0) {
+      std::cout << "Fizz\n";
+    } else if(i % 5 == 0) {
+      std::cout << "Buzz\n";
+    } else {
+      std::cout << i << std::endl;
+    }
+  }
+
+  return 0;
 }
